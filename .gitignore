@@ -4,3 +4,12 @@ app/logs/*
 /*.swp
 /*.tmp
 app/config/parameters.ini
+/app/cache/*
+/app/logs/*
+/*.log
+/*.swp
+/*.tmp
+/app/config/parameters.ini
+*log
+*swp
+*tmp

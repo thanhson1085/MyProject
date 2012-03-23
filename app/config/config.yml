@@ -57,3 +57,15 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+# mongodb 
+doctrine_mongodb:
+    connections:
+        default:
+            server: %mongo_server%
+            options:
+                connect: %mongo_connect%
+    default_database: %mongo_db%
+    document_managers:
+        default:
+            auto_mapping: %mongo_auto_mapping%

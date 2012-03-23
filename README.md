@@ -5,7 +5,7 @@ IT IS MY PROJECT
 
 You can do it if you know Symfony 2.0
 
-* How to join developer team?
+* How to join development team?
 
 contact me by email: thanhson1085@gmail.com
 

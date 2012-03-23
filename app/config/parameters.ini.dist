@@ -9,6 +9,12 @@
     database_user     = root
     database_password =
 
+    mongo_server      = mongodb://localhost:27017
+    mongo_connect     = true
+    mongo_database    = test_database
+    mongo_auto_mapping = true
+
+
     mailer_transport  = smtp
     mailer_host       = localhost
     mailer_user       =
