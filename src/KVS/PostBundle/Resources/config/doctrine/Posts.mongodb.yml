@@ -1,0 +1,108 @@
+KVS\PostBundle\Document\Posts:
+  fields:
+    id:
+      id: true
+    postAuthor:
+      type: int
+      nullable: false
+      column: post_author
+    postDate:
+      type: timestamp
+      nullable: false
+      column: post_date
+    postDateGmt:
+      type: timestamp
+      nullable: false
+      column: post_date_gmt
+    postContent:
+      type: string
+      nullable: false
+      column: post_content
+    postTitle:
+      type: string
+      nullable: false
+      column: post_title
+    postExcerpt:
+      type: string
+      nullable: false
+      column: post_excerpt
+    postStatus:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: post_status
+    commentStatus:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: comment_status
+    pingStatus:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: ping_status
+    postPassword:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: post_password
+    postName:
+      type: string
+      length: 200
+      fixed: false
+      nullable: false
+      column: post_name
+    toPing:
+      type: string
+      nullable: false
+      column: to_ping
+    pinged:
+      type: string
+      nullable: false
+    postModified:
+      type: timestamp
+      nullable: false
+      column: post_modified
+    postModifiedGmt:
+      type: timestamp
+      nullable: false
+      column: post_modified_gmt
+    postContentFiltered:
+      type: string
+      nullable: false
+      column: post_content_filtered
+    postParent:
+      type: int
+      nullable: false
+      column: post_parent
+    guid:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+    menuOrder:
+      type: int 
+      unsigned: false
+      nullable: false
+      column: menu_order
+    postType:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: post_type
+    postMimeType:
+      type: string
+      length: 100
+      fixed: false
+      nullable: false
+      column: post_mime_type
+    commentCount:
+      type: int
+      nullable: false
+      column: comment_count
+  lifecycleCallbacks: {  }

@@ -64,8 +64,9 @@ doctrine_mongodb:
         default:
             server: %mongo_server%
             options:
-                connect: %mongo_connect%
-    default_database: %mongo_db%
+                connect: true 
+    default_database: %mongo_database%
     document_managers:
         default:
-            auto_mapping: %mongo_auto_mapping%
+            auto_mapping: true
+    auto_generate_hydrator_classes: true

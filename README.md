@@ -9,4 +9,9 @@ You can do it if you know Symfony 2.0
 
 contact me by email: thanhson1085@gmail.com
 
+* What's in?
+
+Symfony 2
+MongoDB
+
 Enjoy!
