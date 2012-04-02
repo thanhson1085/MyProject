@@ -1,13 +1,78 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>{% block title %} My Project {% endblock %}</title>
+	{% block stylesheets %}
+		 <link href="{{ asset('/css/kvs-styles.css') }}" type="text/css" rel="stylesheet" />
+	{% endblock %}
+	<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+	<div id="wrapper3">
+
+	<div id="top-menu">
+		<div id="account">
+		<ul id="nav">
+		<li><a href="operator_profile.htm" class="my-account">Lorem Ipsum</a></li>
+		<li>
+		<a href="#">Message</a>
+		<ul>
+		<li><a href="#">Compose message</a></li>
+		<li><a href="#">Inbox</a></li>
+		<li class="sep"><span></span></li>
+		<li><a href="#">Sent message</a></li>
+		<li><a href="#">Spam</a></li>
+		</ul>
+		</li>
+		<li><a href="operator_login.htm" class="logout">Sign out</a></li>
+
+
+		</ul>
+		</div>
+		<div id="loggedas">Status <a href="#">Busy <img src="{{ asset('images/busy.png') }}" valign="middle"/> 28 minutes</a> </div>
+		<div id="loggedas">Logged in as <a href="#">Ipsum</a></div>
+		<ul><li><a href="" class="home">Consectetuer </a></li>
+		<li><a href="#" class="">Lorem Ipsum</a></li>
+		<li><a href="#" class="">Commodo </a></li>
+		<li><a href="#" class="logging">Eodem </a></li>
+		<li><a href="#" class="help">Ipsum</a></li></ul>
+	</div>
+
+	<div id="header2">
+		<div id="logo"><a href="#"> <img src="{{ asset('images/logo.png') }}" width="180"/></a></div>
+		<div id="menu2">
+			<ul>
+				<li><a href="#">Commodo</a>
+				</li><a href="#">Eodem</a>
+				<li><a href="#">Adipiscing</a>
+				<li><a href="#">Nonummy</a>
+				</li>
+
+			</ul>
+		</div>
+
+	</div>
+
+	{% block body %}{% endblock %}
+	<div class="footer-container login-page">
+	<div class="footer">Developed by KVS Company. All rights reserved.</div>
+	<div class="footer-partner">
+		<a href=""><img src="{{ asset ('images/logo.png') }}" width="80"/> </a>
+	</div>
+	<div class="social-link">
+		<a href="#"><img src="{{ asset('images/facebook_box.png') }}"/></a>
+		<a href="#"><img src="{{ asset('images/twitter_box.png') }}"/></a>
+		<a href="#"><img src="{{ asset('images/google_box.png') }}"/></a>
+	</div>
+	</div>
+
+	{% block javascripts %}
+		<script src="{{ asset('/js/jquery.min.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('/js/jquery-ui.min.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('/js/kvs-scripts.js') }}" type="text/javascript"></script>
+	{% endblock %}
+	</div>
+</body>
 </html>
+

@@ -1,0 +1,176 @@
+{% extends "KVSUserBundle::layout.html.twig" %}
+{% block kvs_user_content %}
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+{{ form_widget(form) }}
+<div>
+<input type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
+</div>
+</form>
+
+<div class="page-body"> 
+<div class="container">
+
+	<div class="content">
+		<div class="form-container">
+			<p class="form-title">LOREM IPSUM</p>
+			<form action="#" method="POST"> 
+			<div class="apart">
+			<div class="splitformleft">
+					<div class="label"><p class="label-title even">LOREM IPSUM </p>Dolor sit amet, consectetuer adipiscing elit, diam nonummy nibh.
+					</div>
+			</div>
+			<div class="splitformright">
+					
+				<div class="prompt name">
+
+					<div class="holding">
+						<div class="sidetip">			  
+							<p class="ok isaok">Name looks great.</p>
+							<p class="tip">Nibh euismod tincidunt ut laoreet</p>
+							<p class="blank invalid error" role="alert">A name is required!</p>
+						</div>
+						
+						<input type="text" maxlength="20"/>
+						<span class="holder">adipiscing </span>
+					</div>
+					
+					</div>					
+				<div class="prompt name">
+
+					<div class="holding">
+						<div class="sidetip">			  
+							<p class="ok isaok">Name looks great.</p>
+							<p class="tip">Nibh euismod tincidunt ut laoreet</p>
+							<p class="blank invalid error" role="alert">A name is required!</p>
+						</div>
+						
+						<input type="text" maxlength="20"/>
+						<span class="holder">adipiscing </span>
+					</div>
+					
+					</div>		
+				<div class="prompt name">
+
+					<div class="holding">
+						<div class="sidetip">			  
+							<p class="ok isaok">Name looks great.</p>
+							<p class="tip">Nibh euismod tincidunt ut laoreet</p>
+							<p class="blank invalid error" role="alert">A name is required!</p>
+						</div>
+						
+						<input type="text" maxlength="20"/>
+						<span class="holder">adipiscing </span>
+					</div>
+					
+					</div>	
+				<div class="prompt name">
+
+					<div class="holding">
+						<div class="sidetip">			  
+							<p class="ok isaok">Name looks great.</p>
+							<p class="tip">Nibh euismod tincidunt ut laoreet</p>
+							<p class="blank invalid error" role="alert">A name is required!</p>
+						</div>
+						
+						<input type="text" maxlength="20"/>
+						<span class="holder">adipiscing </span>
+					</div>
+					
+				</div>				
+			
+				<div class="prompt name">				
+					<input type="checkbox" checked="checked"/>
+					<label>Nibh euismod tincidunt ut laoreet</label>
+				</div>
+			 
+			</div>
+			</div>
+			
+			<div class="apart">
+			<div class="splitformleft">
+					<div class="label"><p class="label-title odd">LOREM IPSUM </p>Dolor sit amet, consectetuer adipiscing elit, diam nonummy nibh.
+					</div>
+			</div>
+			<div class="splitformright">
+					
+				<div class="prompt name">
+
+					<div class="holding">
+						<div class="sidetip">			  
+							<p class="ok isaok">Name looks great.</p>
+							<p class="tip">Nibh euismod tincidunt ut laoreet</p>
+							<p class="blank invalid error" role="alert">A name is required!</p>
+						</div>
+						
+						<input type="text" maxlength="20"/>
+						<span class="holder">adipiscing </span>
+					</div>
+					
+				</div>					<div class="prompt name">
+
+					<div class="holding">
+						<div class="sidetip">			  
+							<p class="ok isaok">Name looks great.</p>
+							<p class="tip">Nibh euismod tincidunt ut laoreet</p>
+							<p class="blank invalid error" role="alert">A name is required!</p>
+						</div>
+						
+						<input type="text" maxlength="20"/>
+						<span class="holder">adipiscing </span>
+					</div>
+					
+				</div>					<div class="prompt name">
+
+					<div class="holding">
+						<div class="sidetip">			  
+							<p class="ok isaok">Name looks great.</p>
+							<p class="tip">Nibh euismod tincidunt ut laoreet</p>
+							<p class="blank invalid error" role="alert">A name is required!</p>
+						</div>
+						
+						<input type="text" maxlength="20"/>
+						<span class="holder">adipiscing </span>
+					</div>
+					
+				</div>					<div class="prompt name">
+
+					<div class="holding">
+						<div class="sidetip">			  
+							<p class="ok isaok">Name looks great.</p>
+							<p class="tip">Nibh euismod tincidunt ut laoreet</p>
+							<p class="blank invalid error" role="alert">A name is required!</p>
+						</div>
+						
+						<input type="text" maxlength="20"/>
+						<span class="holder">adipiscing </span>
+					</div>
+					
+				</div>				
+			
+				<div class="prompt name">				
+					<input type="checkbox" checked="checked"/>
+					<label>Nibh euismod tincidunt ut laoreet</label>
+				</div>
+				
+				
+				
+				
+				
+			 
+			</div>
+			</div>
+			<input type="submit" value="Submit"/>
+			
+			</form>
+		</div>
+	</div>
+
+
+
+</div>  
+
+</div> 
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div> 
+
+{% endblock kvs_user_content %}

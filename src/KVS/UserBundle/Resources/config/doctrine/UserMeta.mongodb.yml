@@ -1,0 +1,12 @@
+KVS\UserBundle\Document\UserMeta:
+  fields:
+    id:
+      id: true
+    uid:
+      id: true 
+      column: user_id 
+    address:
+      type: string 
+      nullable: true 
+      column: address
+  lifecycleCallbacks: {  }

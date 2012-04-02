@@ -1,0 +1,42 @@
+{% extends "KVSUserBundle::layout.html.twig" %}
+{% block kvs_user_content %}
+<div class="nosidebar" id="main2">
+    <div class="content-login-container">
+        <div class="login-intro">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<p>
+                <ul>
+                    <li><p>DOLOR SIT AMET</p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+                    <li class="odd"><p>COMMONDO EODEM</p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+                    <li><p>COMMONDO EODEM</p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+                    <li class="odd"><p>LOREM IPSUM </p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+                </ul>
+
+        </div>
+
+        <div class="form-login">
+            <p id="login-title">LOREM IPSUM</p>
+            {% if error %}
+                <p class="text-intro">{{ error|trans({}, 'FOSUserBundle') }}</p>
+                {% endif %}
+
+            <form action="{{ path("fos_user_security_check") }}" method="post">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                <input class="login-input" type="text" id="username" name="_username" value="{{ last_username }}" />
+                <p class="text-intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                <input class="login-input" type="password" id="password" name="_password" />
+                <p class="text-intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+
+                <!--<input type="checkbox" id="remember_me" name="_remember_me" value="on" />-->
+                <p class="lost-password"><a href="/account/lost_password">Forgot password!</a> </p>
+
+                <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
+            </form>
+
+        </div>
+        <div style="clear:both;" class="new-account">   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut <a href="">Laoreet Dolore</a> magna aliquam erat volutpat.</p></div>
+
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+{% endblock kvs_user_content %}
