@@ -2,11 +2,22 @@ KVS\UserBundle\Document\UserMeta:
   fields:
     id:
       id: true
-    uid:
-      id: true 
-      column: user_id 
     address:
       type: string 
       nullable: true 
       column: address
-  lifecycleCallbacks: {  }
+    mobile:
+      type: string 
+      nullable: true 
+      column: mobile 
+    company:
+      type: string 
+      nullable: true 
+      column: company 
+    position:
+      type: string 
+      nullable: true 
+      column: position 
+  referenceOne:
+    user:
+      targetDocument: KVS\UserBundle\Document\User

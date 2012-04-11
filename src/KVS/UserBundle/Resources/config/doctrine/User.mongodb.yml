@@ -2,4 +2,6 @@ KVS\UserBundle\Document\User:
   fields:
     id:
       id: true
-  lifecycleCallbacks: {  }
+  referenceOne:
+    usermeta:
+      targetDocument: KVS\UserBundle\Document\UserMeta

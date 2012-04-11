@@ -3,10 +3,5 @@ KVSPostBundle:
     type:     annotation
     prefix:   /
 
-KVSUserBundle:
-    resource: "@KVSUserBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 _user_bundle:
     resource: "@KVSUserBundle/Resources/config/routing.yml"

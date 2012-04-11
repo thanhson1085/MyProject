@@ -17,12 +17,62 @@ security:
             security: false
 
         main:
-            pattern: ^/
+            pattern: .*
+            # request_matcher: some.service.id
+            # access_denied_url: /foo/error403
+            # access_denied_handler: some.service.id
+            # entry_point: some.service.id
+            # provider: name
+            # context: name
+            # stateless: false
+            # x509:
+            #     provider: name
+            # http_basic:
+            #     provider: name
+            # http_digest:
+            #     provider: name
             form_login:
                 provider: fos_userbundle
                 csrf_provider: form.csrf_provider
-            logout:       true
-            anonymous:    true
+                check_path: /login_check
+                login_path: /login
+                use_forward: false
+                always_use_default_target_path: false 
+                default_target_path: kvs_profile_edit 
+                target_path_parameter: _target_path
+                use_referer: false
+                # failure_path: /foo
+                # failure_forward: false
+                # failure_handler: some.service.id
+                # success_handler: some.service.id
+                # username_parameter: _username
+                # password_parameter: _password
+                # csrf_parameter: _csrf_token
+                # intention: authenticate
+                # csrf_provider: my.csrf_provider.id
+                post_only: true
+                remember_me: false 
+            # remember_me:
+            #     token_provider: name
+            #     key: someS3cretKey
+            #     name: NameOfTheCookie
+            #     lifetime: 3600 # in seconds
+            #     path: /foo
+            #     domain: somedomain.foo
+            #     secure: true
+            #     httponly: true
+            #     always_remember_me: false
+            #     remember_me_parameter: _remember_me
+            logout:
+                path:   /logout
+                target: /login
+                # invalidate_session: false
+                # delete_cookies:
+                #     a: { path: null, domain: null }
+                #     b: { path: null, domain: null }
+                # handlers: [some.service.id, another.service.id]
+                # success_handler: some.service.id
+            anonymous: ~
 
     access_control:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }

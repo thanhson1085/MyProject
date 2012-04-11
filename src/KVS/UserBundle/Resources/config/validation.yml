@@ -1,0 +1,4 @@
+KVS\UserBundle\Document\UserMeta:
+  properties:
+    company:
+      - NotBlank: ~

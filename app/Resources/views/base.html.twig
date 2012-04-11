@@ -6,32 +6,33 @@
 	{% block stylesheets %}
 		 <link href="{{ asset('/css/kvs-styles.css') }}" type="text/css" rel="stylesheet" />
 	{% endblock %}
-	<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+	<link href="{{ asset('favicon.ico') }}" rel="shortcut icon" type="image/vnd.microsoft.icon">
 </head>
 <body>
 	<div id="wrapper3">
 
 	<div id="top-menu">
+
+		{% if is_granted('ROLE_USER') %}
 		<div id="account">
-		<ul id="nav">
-		<li><a href="operator_profile.htm" class="my-account">Lorem Ipsum</a></li>
-		<li>
-		<a href="#">Message</a>
-		<ul>
-		<li><a href="#">Compose message</a></li>
-		<li><a href="#">Inbox</a></li>
-		<li class="sep"><span></span></li>
-		<li><a href="#">Sent message</a></li>
-		<li><a href="#">Spam</a></li>
-		</ul>
-		</li>
-		<li><a href="operator_login.htm" class="logout">Sign out</a></li>
-
-
-		</ul>
+			<ul id="nav">
+				<li><a href="operator_profile.htm" class="my-account">Lorem Ipsum</a></li>
+				<li>
+					<a href="#">Message</a>
+					<ul>
+						<li><a href="#">Compose message</a></li>
+						<li><a href="#">Inbox</a></li>
+						<li class="sep"><span></span></li>
+						<li><a href="#">Sent message</a></li>
+						<li><a href="#">Spam</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ path('fos_user_security_logout') }}" class="logout">Sign out</a></li>
+			</ul>
 		</div>
 		<div id="loggedas">Status <a href="#">Busy <img src="{{ asset('images/busy.png') }}" valign="middle"/> 28 minutes</a> </div>
-		<div id="loggedas">Logged in as <a href="#">Ipsum</a></div>
+		<div id="loggedas">Logged in as <a href="{{ path('kvs_profile_edit') }}">{{ app.user.username }}</a></div>
+		{% endif %}
 		<ul><li><a href="" class="home">Consectetuer </a></li>
 		<li><a href="#" class="">Lorem Ipsum</a></li>
 		<li><a href="#" class="">Commodo </a></li>
