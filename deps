@@ -76,3 +76,7 @@
 [FOSUserBundle]
     git=git://github.com/FriendsOfSymfony/FOSUserBundle.git
     target=bundles/FOS/UserBundle
+
+[Ornicar]
+    git=git://github.com/ornicar/GravatarBundle.git
+    target=/bundles/Ornicar/GravatarBundle

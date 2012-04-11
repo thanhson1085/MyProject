@@ -41,7 +41,14 @@
 	</div>
 
 	<div id="header2">
-		<div id="logo"><a href="#"> <img src="{{ asset('images/logo.png') }}" width="180"/></a></div>
+		<div id="logo">
+			<a href="#"> 
+        		{% if is_granted('ROLE_USER') %}
+				<img src="{{ gravatar(app.user.email, 85, 'g') }}">
+				{% else %}
+				<img src="{{ asset('images/logo.png') }}" width="180">
+				{% endif %}
+			</a></div>
 		<div id="menu2">
 			<ul>
 				<li><a href="#">Commodo</a>

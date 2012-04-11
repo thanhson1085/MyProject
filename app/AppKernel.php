@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new KVS\PostBundle\KVSPostBundle(),
         	new FOS\UserBundle\FOSUserBundle(),
         	new KVS\UserBundle\KVSUserBundle(),
+            new Ornicar\GravatarBundle\OrnicarGravatarBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
