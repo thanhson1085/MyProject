@@ -24,3 +24,7 @@ fos_user_change_password:
 kvs_profile_edit:
     pattern: /profile/edit
     defaults: { _controller: KVSUserBundle:Profile:edit }
+
+kvs_resetting:
+    pattern: /resetting
+    defaults: { _controller: KVSUserBundle:Resetting:request }

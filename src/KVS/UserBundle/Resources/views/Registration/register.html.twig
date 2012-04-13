@@ -1,5 +1,6 @@
 {% extends "KVSUserBundle::layout.html.twig" %}
 {% block kvs_user_content %}
+
 <div class="page-body">
 <div class="container">
 
@@ -7,7 +8,7 @@
         <div class="form-container">
             <p class="form-title">LOREM IPSUM</p>
 
-<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+		<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
 		<div class="apart">
 			<div class="splitformleft">
 					<div class="label"><p class="label-title even">LOREM IPSUM </p>Dolor sit amet, consectetuer adipiscing elit, diam nonummy nibh.
@@ -35,7 +36,7 @@
 					<div class="holding">
 						<div class="sidetip">
 							<p class="ok isaok">Name looks great.</p>
-							<p class="tip">{{ form_label(form.email, 'Mobile Description') }}</p>
+							<p class="tip">{{ form_label(form.email, 'Email Description') }}</p>
 							<p class="blank invalid error" role="alert">{{ form_errors(form.email) }}</p>
 						</div>
 
@@ -50,11 +51,26 @@
 					<div class="holding">
 						<div class="sidetip">
 							<p class="ok isaok">Name looks great.</p>
-							<p class="tip">{{ form_label(form.plainPassword, 'Mobile Description') }}</p>
+							<p class="tip">{{ form_label(form.plainPassword, 'Password Description') }}</p>
 							<p class="blank invalid error" role="alert">{{ form_errors(form.plainPassword) }}</p>
 						</div>
 
-						{{ form_widget(form.plainPassword) }}
+						{{ form_widget(form.plainPassword.first) }}
+						<span class="holder">{{ form_label(form.plainPassword) }}</span>
+					</div>
+
+				</div>
+
+				<div class="prompt name">
+
+					<div class="holding">
+						<div class="sidetip">
+							<p class="ok isaok">Name looks great.</p>
+							<p class="tip">{{ form_label(form.plainPassword, 'Re-Password Description') }}</p>
+							<p class="blank invalid error" role="alert">{{ form_errors(form.plainPassword) }}</p>
+						</div>
+
+						{{ form_widget(form.plainPassword.second) }}
 						<span class="holder">{{ form_label(form.plainPassword) }}</span>
 					</div>
 
@@ -63,7 +79,7 @@
 			</div>
 		</div>
 
-	{#{ form_widget(form) }#}
+    {{ form_rest( form ) }}
 	<input type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
 </form>
 </div> <!--end form-container-->
