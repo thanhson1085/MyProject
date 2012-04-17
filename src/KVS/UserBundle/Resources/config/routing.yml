@@ -28,3 +28,7 @@ kvs_profile_edit:
 kvs_resetting:
     pattern: /resetting
     defaults: { _controller: KVSUserBundle:Resetting:request }
+
+kvs_user_resetting_request:
+    pattern: /resetting/request
+    defaults: { _controller: KVSUserBundle:Resetting:request }
